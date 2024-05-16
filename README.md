@@ -222,7 +222,15 @@ initiad tx distribution withdraw-rewards $(initiad keys show wallet --bech val -
 ### Oy kullan
 ```
 initiad tx gov vote 75 yes --from wallet --chain-id initiation-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.15uinit --node=http://localhost:15657 -y
+
+### Nodeyi Silmek İsterseniz
 ```
+sudo systemctl stop initiad
+sudo systemctl disable initiad
+sudo rm -rf /etc/systemd/system/initiad.service
+sudo rm $(which initiad)
+sudo rm -rf $HOME/.initia
+sed -i "/INITIA_/d" $HOME/.bash_profile
 
 
 
