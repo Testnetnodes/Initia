@@ -9,8 +9,7 @@
 
  * [Topluluk kanalımız](https://t.me/testnetnodesgenel)<br>
  * [Topluluk Twitter](https://twitter.com/testnetnodes)<br>
- * [Discord](https://discord.com/invite/0glabs)<br>
- * [Twitter](https://twitter.com/initiaFDN)<br>
+  * [Twitter](https://twitter.com/initiaFDN)<br>
  * [Discord](https://discord.gg/initia)<br>
 
 ## FAUCET 
