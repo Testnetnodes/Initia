@@ -231,6 +231,7 @@ sudo rm -rf /etc/systemd/system/initiad.service
 sudo rm $(which initiad)
 sudo rm -rf $HOME/.initia
 sed -i "/INITIA_/d" $HOME/.bash_profile
+```
 
 
 
