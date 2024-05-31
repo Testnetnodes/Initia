@@ -1,6 +1,7 @@
 sudo systemctl stop initiad
+wget https://snapshots.tienthuattoan.com/testnet/initia/initia_latest.tar.lz4 -O latest_snapshot.tar.lz4
 cp $HOME/.initia/data/priv_validator_state.json $HOME/.initia/priv_validator_state.json.backup
-rm -rf $HOME/.initia/data
-curl -o - -L http://37.120.189.81/initia_testnet/initia_snap.tar.lz4 | lz4 -c -d - | tar -x -C $HOME/.initia
+initiad tendermint unsafe-reset-all --home $HOME/.initia --keep-addr-book
+lz4 -d -c ./latest_snapshot.tar.lz4 | tar -xf - -C $HOME/.initia
 mv $HOME/.initia/priv_validator_state.json.backup $HOME/.initia/data/priv_validator_state.json
-sudo systemctl restart initiad && sudo journalctl -fu initiad -o cat
+sudo systemctl restart initiad && sudo journalctl -u initiad -f -o cat
